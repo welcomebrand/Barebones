@@ -20,7 +20,8 @@
 	}
 ?>" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta http-equiv="ClearType" content="true" /> 
 
 <!-- The little things -->
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -30,13 +31,13 @@
 
 <!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="all" />
+	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/assets/css/debug.css" /> <!-- debug.css IS JUST SOME DEV HELPERS - DELETE BEFORE DEPLOYING A SITE! -->    
 <!-- Stylesheets -->
 
 <!-- Load scripts quick smart -->
-	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.0.6.js"></script>     
-    <!--[if (lt IE 9) & (!IEMobile)]>
-		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/respond.js"></script>
-		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/selectivizr-min.js"></script>
+	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.5.3.js"></script>     
+   <!--[if (gte IE 6)&(lte IE 8)]>
+		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/selectivizr.js"></script>
 	<![endif]-->
 <!-- Load scripts quick smart -->
 

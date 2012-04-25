@@ -4,102 +4,76 @@
 	Author: James Young
 	Version: 1.0
 	Description: A stripped down, style free (well, nearly!) minimal WordPress theme for developing on top of.
-
-	WELCOMEBRAND STARTER THEME
-	--------------------------
-	Build Version : 	1.0.0
-	Author : 			james@welcomebrand.co.uk
-	Website :			http://www.welcomebrand.co.uk
-	Twitter :			@welcomebrand
+	Website :	http://www.welcomebrand.co.uk
+	Twitter :	@welcomebrand
 	
 	CONTENTS
 	--------
-	01 : Global resets - Minified for convenience (using http://t.co/39Adgaq + http://t.co/YCoVZGc)
-	02 : Global typography & layout rules
+	01 : Global reset
+	02 : Global rules
 	03 : Page styles
-	04 : Post styles 
-	05 : General bits 
+	04 : Post styles
+	05 : General bits
+	
 	
 	00 : MEDIA QUERIES - Common breakpoints	
 	
-	A note regarding - MEDIA QUERIES
-	--------------------------------
-	Skip to the bottom of the stylesheet, all media queries and breakpoints are in this stylesheet. 
-	This is now based on a mobile first approach and there's more flexibility and convenience in using 
-	inline declarations because there's only one stylesheet to maintain.
-	Lessons learnt from looking through the 320&Up source from https://github.com/malarkey/320andup
-
-	A note regarding - PIXEL WIDTHS
-	-------------------------------
-	To add even more flexibility, all widths are now declared as em units instead of pixels. It's a simple
-	calculation based on: 
-	
-	Required element pixel value ÷ parent font size in pixels = em value
-	So, our required width of 770px in ems can be calculated like this:
-	770 ÷ 16 = 48.125em (Note, EM's only work to 3 decimal places)
-	
-	In this case, the base font size is 16px so widths can be easily worked out. 
-	
 */
 
-/* 01 START : Global reset styles */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}ins,mark{background:#333;color:#fff;text-decoration:none}mark{padding:0 3px;}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}::-moz-selection,::-webkit-selection,::selection {text-shadow:none;background:#F1C274;color:#222;}
-/* 01 END : Global reset styles */
+/* 01 START : Global reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}ins,mark{background:#333;color:#fff;text-decoration:none}mark{padding:0 3px;}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}::-moz-selection,::-webkit-selection,::selection {text-shadow:none;background:#333;color:#fff;}.cf:before,.cf:after{content:"";display:table;}.cf:after{clear:both;}.cf{zoom:1;}
+/* 01 END : Global reset */
 
-/* 02 START : Global typography and layout rules */
-html, input {
-	font: 			100%/1.5 sans-serif;
-}
+/* 02 START : Global rules */
+* { 
+	/* Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw */
+	-moz-box-sizing: 	border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: 		border-box; 
+	}
+
+html {
+	background: 	#fff;
+	font-size: 		100%; /* Set a 16px base size */
+	line-height: 	1.5;
+	}
+
+html, body, input, textarea, select { 
+	font-family: 	sans-serif;
+} 
 
 body {
-	background:		#fafafa;
-	color:			#555;
-	line-height: 	1.5;
 	padding: 		0;
 	margin: 		0 auto;
 	width: 			96%;
-	max-width:		78.75em;
+	max-width: 		78.75em /* This is 1260px */;
+	font-size: 		16px;
+	font-size: 		1rem;
 }
 	
-h1, h2, h3, h4, h5, h6 { }
-
-h1 { }	
-
-h2 { }
-
-h3 { }
+h1, h2, h3, h4, h5, h6 {
+	line-height: 	normal;
+}	
 
 blockquote { }
-	
-blockquote cite { }	
+	blockquote cite { }
 
 p { }	
 
 a { }	
-	
-a:hover { }	
+	a:hover { }	
 
 img, 
 a img {
 	max-width: 		100%;
 }
 
-input[type=text],
-input[type=tel],
-input[type=email],
-input[type=submit],
-select { }
-
 figure { }
-
-figcaption { }
-
+	figcaption { }
+	
 .alignleft,
-.alignright {
-	/* left and right float triggered on bigger screens */
-	float: none;
-}
-/* 02 END : Global typography and layout rules */
+.alignright { }
+/* 02 END : Global rules */
 
 
 
@@ -120,53 +94,37 @@ figcaption { }
 /* 05 END : General bits */
 
 
-/* 00 START : MEDIA QUERIES - Common breakpoints */
 
-/* 480px equivalent breakpoint */
-@media only screen and (min-width: 30em) { 
+/* 00 START : MEDIA QUERIES : Some "common" breakpoints - change these to whatever you like */
+/* 
+	
+	Breakpoint sizes in em's for flexibility: 
 
+	-> 30em = 480px
+	-> 37.5em = 600px
+	-> 48em = 768px
+	-> 64em = 1024px
+	-> 78.75em = 1260px
+
+*/
+@media only screen and (min-width: 30em) {
 }
 
-
-
-/* 600px equivalent breakpoint */
 @media only screen and (min-width: 37.5em) { 
-
 }
 
-
-
-/* 768px equivalent breakpoint */
 @media only screen and (min-width: 48em) { 
-.alignleft,
-.alignright {
-	float: left;
-	display: inline;
 }
 
-.alignright {
-	float: right;
-}
-}
-
-
-
-/* 1024px equivalent breakpoint */
 @media only screen and (min-width: 64em) { 
-
 }
 
-
-
-/* 1260px equivalent breakpoint */
 @media only screen and (min-width: 78.75em) { 
-
 }
 /* 00 END : MEDIA QUERIES - Common breakpoints */
 
 
 /* PRINT STYLES */
-
 @media print {
 	/* If you're going to have a print stylesheet, now's the time */
 }

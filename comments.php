@@ -57,5 +57,4 @@
 
 <?php comment_form(); ?>
 
-
-</div><!-- #comments -->
+</aside>

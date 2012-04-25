@@ -41,9 +41,9 @@
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-				<div class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( 'Older posts' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts' ) ); ?></div>
-				</div><!-- #nav-below -->
+    <div class="navigation">
+        <div class="nav-previous"><?php next_posts_link( __( 'Older posts' ) ); ?></div>
+        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts' ) ); ?></div>
+    </div><!-- #nav-below -->
 <?php endif; ?>
 </article>
