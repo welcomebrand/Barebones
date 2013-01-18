@@ -1,6 +1,10 @@
 <?php ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]--> 
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]--> 
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--> <html l<?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <title><?php
 	global $page, $paged;
@@ -20,36 +24,38 @@
 	}
 ?>" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-<meta http-equiv="ClearType" content="true" /> 
+<meta name="viewport" content="width=device-width" />
 
 <!-- The little things -->
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="icon" type="image/png" href="<?php echo bloginfo('template_directory'); ?>/assets/images/favicon.png" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/favicon.png">
+	<link rel="apple-touch-icon" href="<?php echo bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png"/> 
+    <link rel="author" type="text/plain" href="<?php echo bloginfo('template_directory'); ?>/humans.txt" />  
 <!-- The little things -->
 
 <!-- Stylesheets -->
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="all" />
-	<link rel="stylesheet" href="<?php echo bloginfo('template_directory'); ?>/assets/css/debug.css" /> <!-- debug.css IS JUST SOME DEV HELPERS - DELETE BEFORE DEPLOYING A SITE! -->    
+	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <!-- Stylesheets -->
 
 <!-- Load scripts quick smart -->
-	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.5.3.js"></script>     
-   <!--[if (gte IE 6)&(lte IE 8)]>
-		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/selectivizr.js"></script>
+	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.6.2.js"></script>     
+    <!--[if (lt IE 9) & (!IEMobile)]>
+		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/selectivizr-min.js"></script>
 	<![endif]-->
 <!-- Load scripts quick smart -->
 
-<?php wp_deregister_script('jquery');wp_head(); ?>
+	<?php wp_deregister_script('jquery');wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> id="top">
     <header role="banner">
-        <?php get_search_form(); ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
-        <p class="desc"><?php bloginfo( 'description' ); ?></p>
+        <p class="desc">
+			<?php bloginfo( 'description' ); ?>
+        </p>
         <nav role="navigation">
             <?php $args = array( 'menu' => 'mainnav', 'container' => false, 'menu_id' => false, 'menu_class' => false); wp_nav_menu($args); ?>
         </nav>
+        <?php get_search_form(); ?>
     </header>

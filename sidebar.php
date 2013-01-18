@@ -4,5 +4,3 @@
         || !dynamic_sidebar() ) : ?>
 	<?php endif; ?>
 </section>
-
-

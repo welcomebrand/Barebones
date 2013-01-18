@@ -2,58 +2,55 @@
 
 	Theme Name: Barebones
 	Author: James Young
-	Version: 1.0
+	Website: http://www.welcomebrand.co.uk
+	Twitter: @welcomebrand
+	Version: 2.0
 	Description: A stripped down, style free (well, nearly!) minimal WordPress theme for developing on top of.
-	Website :	http://www.welcomebrand.co.uk
-	Twitter :	@welcomebrand
 	
 	CONTENTS
-	--------
-	01 : Global reset
-	02 : Global rules
-	03 : Page styles
-	04 : Post styles
-	05 : General bits
+	-------------
+	- Global resets
+	- Global typography & layout rules
+	- Page styles
+	- Post styles 
+	- General bits 
 	
-	
-	00 : MEDIA QUERIES - Common breakpoints	
+	- Media queries
 	
 */
 
-/* 01 START : Global reset */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}ins,mark{background:#333;color:#fff;text-decoration:none}mark{padding:0 3px;}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}::-moz-selection,::-webkit-selection,::selection {text-shadow:none;background:#333;color:#fff;}.cf:before,.cf:after{content:"";display:table;}.cf:after{clear:both;}.cf{zoom:1;}
-/* 01 END : Global reset */
+/* 01 START : Global reset styles */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent}ins,mark{background:#333;color:#fff;text-decoration:none}mark{padding:0 .2em;}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}::-moz-selection,::-webkit-selection,::selection {text-shadow:none;background:#333;color:#fff;}.cf:before,.cf:after{content:"";display:table;}.cf:after{clear:both;}.cf{zoom:1;}[type=submit]{cursor:pointer;}
+/* 01 END : Global reset styles */
 
-/* 02 START : Global rules */
+/* START : Global rules */
 * { 
-	/* Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw */
-	-moz-box-sizing: 	border-box; 
-	-webkit-box-sizing: border-box; 
-	box-sizing: 		border-box; 
+	-webkit-box-sizing:  border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing:  border-box; 
 	}
 
 html {
-	background: 	#fff;
-	font-size: 		100%; /* Set a 16px base size */
-	line-height: 	1.5;
+	font-size: 100%; /* Set a 16px base size */
 	}
 
-html, body, input, textarea, select { 
-	font-family: 	sans-serif;
-} 
-
 body {
-	padding: 		0;
-	margin: 		0 auto;
-	width: 			96%;
-	max-width: 		78.75em /* This is 1260px */;
-	font-size: 		16px;
-	font-size: 		1rem;
-}
-	
+	padding: 2%;
+	margin: 0 auto;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+	}
+
+/* Set vertical rhythm */
+h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr {
+    margin-bottom: 24px;
+	margin-bottom: 1.5rem; /* 24px equivalent/fallback */
+	}	
+
 h1, h2, h3, h4, h5, h6 {
-	line-height: 	normal;
-}	
+	line-height: normal;
+	}	
 
 blockquote { }
 	blockquote cite { }
@@ -65,66 +62,75 @@ a { }
 
 img, 
 a img {
-	max-width: 		100%;
-}
+	max-width: 100%;
+	}
 
 figure { }
 	figcaption { }
-	
+
 .alignleft,
-.alignright { }
-/* 02 END : Global rules */
+.alignright {
+	/* left and right float triggered on bigger screens */
+	float: none;
+	}
+/* END : Global rules */
 
 
 
-/* 03 START : Page styles */
+/* START : Page styles */
 
-/* 03 END : Page styles */
-
-
-
-/* 04 START : Post styles */
-
-/* 04 END : Post styles */
+/* END : Page styles */
 
 
 
-/* 05 START : General bits */
+/* START : Post styles */
 
-/* 05 END : General bits */
+/* END : Post styles */
 
 
 
-/* 00 START : MEDIA QUERIES : Some "common" breakpoints - change these to whatever you like */
-/* 
-	
-	Breakpoint sizes in em's for flexibility: 
+/* START : General bits */
 
-	-> 30em = 480px
-	-> 37.5em = 600px
-	-> 48em = 768px
-	-> 64em = 1024px
-	-> 78.75em = 1260px
+/* END : General bits */
 
-*/
-@media only screen and (min-width: 30em) {
+
+/* START : Media Queries */
+
+	/* I've added some arbitrary breakpoints to get you started, you don't have to use these - you can remove, edit or add to them however you like. They're just a guide. */
+
+/* 480px equivalent breakpoint */
+@media only screen and (min-width: 30em) { 
 }
 
+/* 600px equivalent breakpoint */
 @media only screen and (min-width: 37.5em) { 
 }
 
+/* 768px equivalent breakpoint */
 @media only screen and (min-width: 48em) { 
+.alignleft,
+.alignright {
+	float: left;
+	display: inline;	
+	}
+
+	.alignright {
+		float: right;
+	}
 }
 
+/* 1024px equivalent breakpoint */
 @media only screen and (min-width: 64em) { 
 }
 
+/* 1260px equivalent breakpoint */
 @media only screen and (min-width: 78.75em) { 
 }
-/* 00 END : MEDIA QUERIES - Common breakpoints */
+/* END : Media Queries */
 
 
 /* PRINT STYLES */
+
 @media print {
 	/* If you're going to have a print stylesheet, now's the time */
 }

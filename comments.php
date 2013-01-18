@@ -25,22 +25,29 @@
 			?></h2>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<div class="navigation">
-				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>' ) ); ?></div>
-			</div> <!-- .navigation -->
+    <ul class="navigation">
+        <li class="older">
+            <?php previous_comments_link( __( 'Older Comments' ) ); ?>
+        </li> 
+        <li class="newer">
+			<?php next_comments_link( __( 'Newer Comments' ) ); ?>
+        </li>
+    </ul>
 <?php endif; // check for comment navigation ?>
 
-			<ol class="commentlist">
-				<?php wp_list_comments( array( 'callback' => 'post_comments' ) ); ?>
-			</ol>
+<ol class="commentlist">
+    <?php wp_list_comments( array( 'callback' => 'post_comments' ) ); ?>
+</ol>
 
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			
-            <div class="navigation">
-				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>' ) ); ?></div>
-			</div><!-- .navigation -->
+<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>			
+    <ul class="navigation">
+        <li class="older">
+            <?php previous_comments_link( __( 'Older Comments' ) ); ?>
+        </li> 
+        <li class="newer">
+			<?php next_comments_link( __( 'Newer Comments' ) ); ?>
+        </li>
+    </ul>
 <?php endif; // check for comment navigation ?>
 
 <?php else : // or, if we don't have comments:
@@ -57,4 +64,4 @@
 
 <?php comment_form(); ?>
 
-</aside>
+</div><!-- #comments -->

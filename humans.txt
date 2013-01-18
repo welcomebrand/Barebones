@@ -1,0 +1,9 @@
+Barebones is a simple WordPress "starter theme" - It's a tool that is provided as is with the aim of just speeding up the first steps towards creating your own theme. 
+
+Author: James Young
+Twitter: @welcomebrand
+Web: http://welcomebrand.co.uk
+
+/* SUPPORT HUMANS.TXT */
+
+For more info on what this is visit humanstxt.org
