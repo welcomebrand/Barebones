@@ -1,10 +1,10 @@
 <?php ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]--> 
-<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]--> 
-<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]--> 
-<!--[if (gt IE 9)|!(IE)]><!--> <html l<?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <title><?php
 	global $page, $paged;
@@ -18,7 +18,7 @@
 	?>
 </title>
 <meta name="description" content="<?php if ( is_single() ) {
-	single_post_title('', true); 
+	single_post_title('', true);
 	} else {
 	bloginfo('name'); echo " - "; bloginfo('description');
 	}
@@ -30,8 +30,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/favicon.png">
-	<link rel="apple-touch-icon" href="<?php echo bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png"/> 
-    <link rel="author" type="text/plain" href="<?php echo bloginfo('template_directory'); ?>/humans.txt" />  
+	<link rel="apple-touch-icon" href="<?php echo bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png"/>
+    <link rel="author" type="text/plain" href="<?php echo bloginfo('template_directory'); ?>/humans.txt" />
 <!-- The little things -->
 
 <!-- Stylesheets -->
@@ -39,7 +39,7 @@
 <!-- Stylesheets -->
 
 <!-- Load scripts quick smart -->
-	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.6.2.js"></script>     
+	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.6.2.js"></script>
     <!--[if (lt IE 9) & (!IEMobile)]>
 		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/selectivizr-min.js"></script>
 	<![endif]-->
