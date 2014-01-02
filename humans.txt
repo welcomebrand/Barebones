@@ -1,4 +1,7 @@
-Barebones is a simple WordPress "starter theme" - It's a tool that is provided as is with the aim of just speeding up the first steps towards creating your own theme. 
+Barebones is a simple WordPress "starter theme" - It's a tool that is provided as is with the aim of just speeding up the first steps towards creating your own theme.
+
+To find out more visit: http://www.welcomebrand.co.uk/thoughts/barebones-a-wordpress-developers-base-theme/
+Git repo: https://github.com/welcomebrand/Barebones
 
 Author: James Young
 Twitter: @welcomebrand
