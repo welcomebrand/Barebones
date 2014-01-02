@@ -1,15 +1,6 @@
 <?php ?>
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
-<<<<<<< HEAD
-<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]-->
-=======
-<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]--> 
-<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]--> 
-<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]--> 
->>>>>>> 81e9bb3a3f20453db0fcc87d98b868bdc1c678c6
+<!--[if IE 9 ]><html lang="en" class="ie ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <title><?php
@@ -37,21 +28,18 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/favicon.png">
 	<link rel="apple-touch-icon" href="<?php echo bloginfo('template_directory'); ?>/apple-touch-icon-precomposed.png"/>
-    <link rel="author" type="text/plain" href="<?php echo bloginfo('template_directory'); ?>/humans.txt" />
 <!-- The little things -->
 
 <!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <!-- Stylesheets -->
 
-<!-- Load scripts quick smart -->
-	<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.6.2.js"></script>
-    <!--[if (lt IE 9) & (!IEMobile)]>
-		<script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/selectivizr-min.js"></script>
-	<![endif]-->
-<!-- Load scripts quick smart -->
-
+<!--
+    Optional Stuff - Remove comment if you need it
+    <script src="<?php echo bloginfo('template_directory'); ?>/assets/scripts/modernizr-2.6.2.js"></script>
+-->
 	<?php wp_deregister_script('jquery');wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?> id="top">
