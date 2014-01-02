@@ -1,9 +1,15 @@
 <?php ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<<<<<<< HEAD
 <!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]-->
+=======
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]--> 
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]--> 
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]--> 
+>>>>>>> 81e9bb3a3f20453db0fcc87d98b868bdc1c678c6
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <title><?php
