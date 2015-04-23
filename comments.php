@@ -3,7 +3,6 @@
 <aside class="comments">
 	<?php if ( post_password_required() ) : ?>
     <p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.' ); ?></p>
-</aside>
 
 <?php
 		/* Stop the rest of comments.php from being processed,
@@ -28,7 +27,7 @@
     <ul class="navigation">
         <li class="older">
             <?php previous_comments_link( __( 'Older Comments' ) ); ?>
-        </li> 
+        </li>
         <li class="newer">
 			<?php next_comments_link( __( 'Newer Comments' ) ); ?>
         </li>
@@ -39,11 +38,11 @@
     <?php wp_list_comments( array( 'callback' => 'post_comments' ) ); ?>
 </ol>
 
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>			
+<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
     <ul class="navigation">
         <li class="older">
             <?php previous_comments_link( __( 'Older Comments' ) ); ?>
-        </li> 
+        </li>
         <li class="newer">
 			<?php next_comments_link( __( 'Newer Comments' ) ); ?>
         </li>
@@ -64,4 +63,4 @@
 
 <?php comment_form(); ?>
 
-</div><!-- #comments -->
+</aside><!-- #comments -->
